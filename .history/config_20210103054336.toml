@@ -1,0 +1,135 @@
+baseurl = "localhost"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+title = "My Blog"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+paginate = 10 
+rssLimit = 10 
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir = "content"
+dataDir = "data"
+layoutDir = "layouts"
+publishDir = "public"
+
+buildDrafts = false
+buildExpired = false
+buildFuture = false
+canonifyURLs = true
+
+disable404 = false
+disableHugoGeneratorInject = false
+disableRSS = false
+disableSitemap = false
+enableEmoji = true
+enableGitInfo = false
+enableMissingTranslationPlaceholders = false
+enableRobotsTXT = true
+
+[permalinks]
+posts = "/posts/:year/:month/:title/"
+
+[author]
+name = "Justin Hung"
+
+[blackfriday]
+hrefTargetBlank = true
+
+[taxonomies]
+category = "blog"
+series = "series"
+tag = "tags"
+
+[params]
+dateform = "Jan 2, 2006"
+dateformNum = "2006-01-02"
+dateformNumTime = "2006-01-02 15:04"
+dateformShort = "Jan 2"
+
+# Metadata mostly used in document's head
+# 
+description = "Nice theme for homepages and blogs"
+images = [""]
+keywords = ""
+
+# Subtitle for home
+homeSubtitle = "Software Engineer"
+
+# Set disableReadOtherPosts to true in order to hide the links to other posts.
+disableReadOtherPosts = false
+
+# Enable sharing buttons, if you linke
+enableSharingButtons = true
+
+# Metadata mostly used in document's head
+description = "My new homepage or blog"
+images = [""]
+keywords = "homepage, blog"
+
+# Integrate Javascript files or stylesheets by adding the url to the external assets or by
+# linking local files with their path relative to the static folder, e.g. "css/styles.css"
+#
+customCSS = []
+customJS = []
+
+# Default theme "light" or "dark"
+defaultTheme = "dark"
+
+# Toggle this option need to rebuild SCSS, requires extended version of Hugo
+#
+justifyContent = false # Set "text-align: justify" to .post-content.
+
+# Default theme "light" or "dark"
+#
+defaultTheme = "dark"
+themeColor = "#252627"
+
+# Social icons
+[[params.social]]
+name = "twitter"
+url = "https://twitter.com/"
+
+[[params.social]]
+name = "email"
+url = "mailto:nobody@example.com"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/"
+
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/"
+
+[[params.social]]
+name = "stackoverflow"
+url = "https://www.stackoverflow.com/"
+
+[languages]
+[languages.en]
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+keywords = ""
+readOtherPosts = "Read other posts"
+subtitle = "Blog"
+title = "Justin Hung"
+
+[languages.en.params.logo]
+logoHomeLink = "/"
+logoText = "cd ~"
+# or
+#
+# path = "/img/your-example-logo.svg"
+# alt = "Your example logo alt text"
+
+# And you can even create generic menu
+[[menu.main]]
+identifier = "blog"
+name = "Blog"
+url = "/posts"

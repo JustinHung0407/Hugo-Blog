@@ -1,4 +1,4 @@
-baseurl = "localhost"
+baseurl = "https://mystifying-banach-b77e51.netlify.app/"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 title = "My Blog"

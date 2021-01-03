@@ -1,4 +1,4 @@
-baseurl = "https://justinblog.netlify.app/"
+baseurl = "https://www.justinhung.space/"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 title = "My Blog"

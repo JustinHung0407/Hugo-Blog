@@ -1,5 +1,6 @@
 # Hugo default output directory
 /public
+.history
 
 ## OS Files
 # Windows
@@ -8,6 +9,7 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 /resources/_gen/
+temp.txt
 
 # OSX
 .DS_Store

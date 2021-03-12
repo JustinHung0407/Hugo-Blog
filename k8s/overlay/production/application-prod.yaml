@@ -1,0 +1,34 @@
+server:
+  port: 8085
+  shutdown: "graceful"
+spring:
+  application:
+    name: ${info.app.name}
+  profiles:
+    active: prod
+  lifecycle:
+    timeout-per-shutdown-phase: "20s"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: ${info.app.name}
+info:
+  app:
+    name: SpringK8s-prod
+    description: Spring Boot actuator for k8s cloud stack demo
+    version: 1.0.0
+    encoding: UTF-8
+    java.version: 1.8
+logging:
+  level:
+    org:
+      springframework: INFO

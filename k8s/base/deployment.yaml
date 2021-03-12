@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hugo-blog
+  name: hugo-blog-deploy
+  namespace: hugo-blog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hugo-blog
+  template:
+    metadata:
+      labels:
+        app: hugo-blog
+        version: v1
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: hugo-blog
+          image: hugo-app
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "300m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"

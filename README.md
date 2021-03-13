@@ -4,6 +4,9 @@
 
 A really simple blog for recording things
 
+## Hugo local test scripts
+* `hugo server --disableFastRender -w -v --baseUrl=localhost --bind="0.0.0.0"`
+
 ## Build project
 * Docker:
   * `docker build -t hugo-app .`
@@ -22,3 +25,19 @@ kustomize build k8s/base/ | kubectl apply -f -
 * Makefile:
     * [https://dev.to/yankee/streamline-projects-using-makefile-28fe]()
     * `make kubectl-apply`
+
+
+## Submodule Usage
+- add submodule
+  - `git submodule add https://github.com/panr/hugo-theme-hello-friend.git themes/hello-friend`
+  - `git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng`
+
+- remove submodule
+  - `git submodule deinit themes/hello-friend`
+  - `rm -rf .git/modules/themes/hello-friend`
+  - `git rm -f themes/hello-friend`
+  - `git rm --cached themes/hello-friend`
+
+## Reference
+- [submodule](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule)
+- 

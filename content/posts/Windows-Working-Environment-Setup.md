@@ -54,8 +54,7 @@ series:
   - theme: [Dracula](https://draculatheme.com/)
   - font: [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
     <details>
-      <summary>Click to expand!</summary>
-      
+
       ``` json
       {
         "$schema":"https://aka.ms/terminal-profiles-schema",
@@ -152,10 +151,7 @@ series:
             }
         ]
       }
-
-  ```
-  </details>
-  ```
+      ```
 
 ## Step 3: ZSH
 

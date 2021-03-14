@@ -39,8 +39,6 @@ Components' version :
 ### Spring Initializr
 - Details : Spring initializr ()
 - Clone project and add to IDE
-
-
     ``` shell
     curl https://start.spring.io/starter.tgz \
         -d language=java \
@@ -56,7 +54,6 @@ Components' version :
     | tar -xzvf -
     ```
 - delete application.properties and add application.yaml
-
 
     ``` yaml
     server:

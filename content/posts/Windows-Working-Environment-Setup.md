@@ -53,7 +53,6 @@ series:
 
   - theme: [Dracula](https://draculatheme.com/)
   - font: [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
-    <details>
 
       ``` json
       {
@@ -223,6 +222,7 @@ series:
   - Download and Install
     `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   - Add to path
+
     ```bash
     test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
     test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -263,11 +263,12 @@ series:
   - the **VHDX**
 - Alias
   - `alias canhas="sudo apt-get install -y"`
-  ```
-  alias dc="docker-compose"
-  alias dcr="docker-compose run --rm"
-  alias dcb="docker-compose run --rm --build"
-  ```
+
+    ```
+    alias dc="docker-compose"
+    alias dcr="docker-compose run --rm"
+    alias dcb="docker-compose run --rm --build"
+    ```
 
 ## Reference
 

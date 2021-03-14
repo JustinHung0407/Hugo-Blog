@@ -1,39 +1,29 @@
 ---
 title: "Windows Working Environment Setup"
-description: ""
-author: "Justin Hung"
-type: ["posts","post"]
-tags: [
-    "go",
-    "golang",
-    "hugo",
-    "development",
-]
-categories: [
-    "Development",
-    "golang",
-]
-series: ["Hugo 101"]
+description: "my windows pc setup for develope"
 date: 2021-03-13T06:17:47+08:00
 draft: false
 toc: true
 images:
+author: "Justin Hung"
+type: ["posts", "post"]
 tags:
-  - env-setting
+  - WSL2
+  - Docker Desktop
+  - zsh
+  - zim
+  - brew
+categories:
+  - setup
+  - Learning
+series:
+  - Home Kubernetes public website setup
 ---
+
 # Achievement
 
 > WSL2 + Docker Desktop + zsh/zim + brew
-![K8s](/images/wsl.png)
-``` go
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello, World!")
-}
-```
+> ![K8s](/images/wsl.png)
 
 ## Step 1: WSL2
 
@@ -60,110 +50,111 @@ func main() {
 - Download: [Windows Terminal](https://www.microsoft.com/zh-tw/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab)
 
 - My setting
+
   - theme: [Dracula](https://draculatheme.com/)
   - font: [MesloLGS NF](https://github.com/romkatv/dotfiles-public/tree/master/.local/share/fonts/NerdFonts)
-  <details>
-    <summary>Click to expand!</summary>
-    
-    ``` json
-    {
-      "$schema": "https://aka.ms/terminal-profiles-schema",
-      "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-      "copyOnSelect": true,
-      "copyFormatting": true,
-      "multiLinePasteWarning": false,
-      "largePasteWarning": false,
-      "confirmCloseAllTabs": false,
+    <details>
+      <summary>Click to expand!</summary>
+      
+      ``` json
+      {
+        "$schema": "https://aka.ms/terminal-profiles-schema",
+        "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+        "copyOnSelect": true,
+        "copyFormatting": true,
+        "multiLinePasteWarning": false,
+        "largePasteWarning": false,
+        "confirmCloseAllTabs": false,
 
-      "profiles": {
-        "defaults": {
-          "colorScheme": "Dracula",
-          "acrylicOpacity": 0.5,
-          "snapOnInput": true,
-          "startingDirectory": "%USERPROFILE%",
-          "useAcrylic": true,
-          "closeOnExit": true
+        "profiles": {
+          "defaults": {
+            "colorScheme": "Dracula",
+            "acrylicOpacity": 0.5,
+            "snapOnInput": true,
+            "startingDirectory": "%USERPROFILE%",
+            "useAcrylic": true,
+            "closeOnExit": true
+          },
+          "list": [
+            {
+              "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+              "suppressApplicationTitle": true,
+              "tabTitle": "Ubuntu 20.04",
+              "name": "Ubuntu-20.04",
+              "fontFace": "MesloLGS NF",
+              "source": "Windows.Terminal.Wsl",
+              "hidden": false
+            }
+            {
+              // Make changes here to the powershell.exe profile.
+              "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+              "name": "Windows PowerShell",
+              "commandline": "powershell.exe",
+              "hidden": false
+            },
+            {
+              // Make changes here to the cmd.exe profile.
+              "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+              "name": "Command Prompt",
+              "commandline": "cmd.exe",
+              "hidden": false
+            }
+          ]
         },
-        "list": [
+        "schemes": [
           {
-            "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-            "suppressApplicationTitle": true,
-            "tabTitle": "Ubuntu 20.04",
-            "name": "Ubuntu-20.04",
-            "fontFace": "MesloLGS NF",
-            "source": "Windows.Terminal.Wsl",
-            "hidden": false
+            "name": "Dracula",
+            "cursorColor": "#F8F8F2",
+            "selectionBackground": "#44475A",
+            "background": "#282A36",
+            "foreground": "#F8F8F2",
+            "black": "#21222C",
+            "blue": "#BD93F9",
+            "cyan": "#8BE9FD",
+            "green": "#50FA7B",
+            "purple": "#FF79C6",
+            "red": "#FF5555",
+            "white": "#F8F8F2",
+            "yellow": "#F1FA8C",
+            "brightBlack": "#6272A4",
+            "brightBlue": "#D6ACFF",
+            "brightCyan": "#A4FFFF",
+            "brightGreen": "#69FF94",
+            "brightPurple": "#FF92DF",
+            "brightRed": "#FF6E6E",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFFA5"
           }
+        ],
+        "actions": [
           {
-            // Make changes here to the powershell.exe profile.
-            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-            "name": "Windows PowerShell",
-            "commandline": "powershell.exe",
-            "hidden": false
+            "command": {
+              "action": "copy",
+              "singleLine": false
+            },
+            "keys": "ctrl+c"
           },
           {
-            // Make changes here to the cmd.exe profile.
-            "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-            "name": "Command Prompt",
-            "commandline": "cmd.exe",
-            "hidden": false
+            "command": "paste",
+            "keys": "ctrl+v"
+          },
+          {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+          },
+          {
+            "command": {
+              "action": "splitPane",
+              "split": "auto",
+              "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+          },
+          {
+            "command": "closePane",
+            "keys": "ctrl+w"
           }
         ]
-      },
-      "schemes": [
-        {
-          "name": "Dracula",
-          "cursorColor": "#F8F8F2",
-          "selectionBackground": "#44475A",
-          "background": "#282A36",
-          "foreground": "#F8F8F2",
-          "black": "#21222C",
-          "blue": "#BD93F9",
-          "cyan": "#8BE9FD",
-          "green": "#50FA7B",
-          "purple": "#FF79C6",
-          "red": "#FF5555",
-          "white": "#F8F8F2",
-          "yellow": "#F1FA8C",
-          "brightBlack": "#6272A4",
-          "brightBlue": "#D6ACFF",
-          "brightCyan": "#A4FFFF",
-          "brightGreen": "#69FF94",
-          "brightPurple": "#FF92DF",
-          "brightRed": "#FF6E6E",
-          "brightWhite": "#FFFFFF",
-          "brightYellow": "#FFFFA5"
-        }
-      ],
-      "actions": [
-        {
-          "command": {
-            "action": "copy",
-            "singleLine": false
-          },
-          "keys": "ctrl+c"
-        },
-        {
-          "command": "paste",
-          "keys": "ctrl+v"
-        },
-        {
-          "command": "find",
-          "keys": "ctrl+shift+f"
-        },
-        {
-          "command": {
-            "action": "splitPane",
-            "split": "auto",
-            "splitMode": "duplicate"
-          },
-          "keys": "alt+shift+d"
-        },
-        {
-          "command": "closePane",
-          "keys": "ctrl+w"
-        }
-      ]
 
   }
 
@@ -262,6 +253,7 @@ func main() {
 - ZSH plugin
   - [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins)
 - Backup WSL2
+
   - Official way
     - Check version and name`wsl -l -v`
     - Export
@@ -273,6 +265,7 @@ func main() {
   - Using LXRunOffline
 
     > Pending...
+
 - WSL2 Location
   - `%userprofile%\AppData\Local\Packages`
   - match prefix `CanonicalGroupLimited`
@@ -286,6 +279,5 @@ func main() {
   ```
 
 ## Reference
+
 - [WSL2-setup](https://yduman.github.io/blog/wsl2-setup/)
-
-

@@ -34,9 +34,17 @@ kustomize build k8s/base/ | kubectl apply -f -
 
 - remove submodule
   - `git submodule deinit themes/hello-friend`
-  - `rm -rf .git/modules/themes/hello-friend`
-  - `git rm -f themes/hello-friend`
   - `git rm --cached themes/hello-friend`
+  - `rm -rf .git/modules/themes/hello-friend`
+  - edit .gitmodules
+  - edit .git/config
+  - `git rm -f themes/hello-friend`
+
+## Syntax Highlighting
+- Using PrismJS - dracula
+  - `https://github.com/PrismJS/prism-themes/blob/master/themes/prism-dracula.css`
+- Transform toool
+  - `https://css2sass.herokuapp.com/`
 
 ## Reference
 - [submodule](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule)

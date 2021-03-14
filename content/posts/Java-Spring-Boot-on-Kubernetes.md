@@ -1,11 +1,22 @@
 ---
 title: "Java - Spring Boot on Kubernetes"
+description: "Java Spring Boot Web App containerize and deploy to Kubernetes"
 date: 2021-02-23T22:08:25+08:00
 draft: false
-toc: false
+toc: true
 images:
+author: "Justin Hung"
+type: ["posts", "post"]
 tags:
-  - Dockerize and Kubernetes
+  - Docker
+  - Kubernetes
+  - Java
+  - Spring Boot
+categories:
+  - POC
+  - Learning
+series:
+  - Kubernetes
 ---
 
 ## Prerequisites

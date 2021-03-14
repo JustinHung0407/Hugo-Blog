@@ -3,8 +3,11 @@ languageCode = "en-us"
 theme = "hello-friend-ng"
 title = "My Blog"
 
-PygmentsCodeFences = true
-PygmentsStyle = "dracula"
+
+# Enable for syntax highlighting
+# pygmentsCodefencesGuessSyntax = true
+pygmentsUseClassic = false
+# pygmentsstyle = "fruity"
 
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 paginate = 10
@@ -77,16 +80,13 @@ disableHugoGeneratorInject = false
   customCSS = []
   customJS = []
   
-  # Default theme "light" or "dark"
-  # defaultTheme = "dark"
-  
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   #
   justifyContent = false # Set "text-align: justify" to .post-content.
   
   # Default theme "light" or "dark"
   #
-  defaultTheme = "dark"
+  # defaultTheme = "dark"
   # themeColor = "#252627"
   
   # Custom footer 
@@ -108,7 +108,7 @@ disableHugoGeneratorInject = false
   [params.logo]
     logoMark     = ">"
     logoHomeLink = "/"
-    logoText = "$ cd ~"
+    logoText = "cd ~"
   # Set true to remove the logo cursor entirely.
   # logoCursorDisabled = false
   # Set to a valid CSS color to change the cursor in the logo.
@@ -170,7 +170,7 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name = "Posts"
     url = "posts/"
-  [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "categories/"
+  # [[menu.main]]
+  #   identifier = "categories"
+  #   name = "Categories"
+  #   url = "categories/"

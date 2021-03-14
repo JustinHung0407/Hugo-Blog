@@ -33,9 +33,9 @@ kustomize build k8s/base/ | kubectl apply -f -
   - `git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng`
 
 - remove submodule
-  - `git submodule deinit themes/hello-friend`
-  - `git rm --cached themes/hello-friend`
-  - `rm -rf .git/modules/themes/hello-friend`
+  - `git submodule deinit -f themes/hello-friend-ng`
+  - `git rm --cached themes/hello-friend-ng`
+  - `rm -rf .git/modules/themes/hello-friend-ng`
   - edit .gitmodules
   - edit .git/config
   - `git rm -f themes/hello-friend`

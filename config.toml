@@ -14,7 +14,7 @@ paginate = 10
 rssLimit = 10
 
 # googleAnalytics = ""
-# disqusShortname = ""
+disqusShortname = "justinhung-space"
 
 archetypeDir = "archetypes"
 contentDir = "content"

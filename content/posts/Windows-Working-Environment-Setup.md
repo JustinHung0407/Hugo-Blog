@@ -58,105 +58,100 @@ series:
       
       ``` json
       {
-        "$schema": "https://aka.ms/terminal-profiles-schema",
-        "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-        "copyOnSelect": true,
-        "copyFormatting": true,
-        "multiLinePasteWarning": false,
-        "largePasteWarning": false,
-        "confirmCloseAllTabs": false,
-
-        "profiles": {
-          "defaults": {
-            "colorScheme": "Dracula",
-            "acrylicOpacity": 0.5,
-            "snapOnInput": true,
-            "startingDirectory": "%USERPROFILE%",
-            "useAcrylic": true,
-            "closeOnExit": true
-          },
-          "list": [
-            {
-              "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-              "suppressApplicationTitle": true,
-              "tabTitle": "Ubuntu 20.04",
-              "name": "Ubuntu-20.04",
-              "fontFace": "MesloLGS NF",
-              "source": "Windows.Terminal.Wsl",
-              "hidden": false
-            }
-            {
-              // Make changes here to the powershell.exe profile.
-              "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-              "name": "Windows PowerShell",
-              "commandline": "powershell.exe",
-              "hidden": false
+        "$schema":"https://aka.ms/terminal-profiles-schema",
+        "defaultProfile":"{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+        "copyOnSelect":true,
+        "copyFormatting":true,
+        "multiLinePasteWarning":false,
+        "largePasteWarning":false,
+        "confirmCloseAllTabs":false,
+        "profiles":{
+            "defaults":{
+              "colorScheme":"Dracula",
+              "acrylicOpacity":0.5,
+              "snapOnInput":true,
+              "startingDirectory":"%USERPROFILE%",
+              "useAcrylic":true,
+              "closeOnExit":true
             },
-            {
-              // Make changes here to the cmd.exe profile.
-              "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-              "name": "Command Prompt",
-              "commandline": "cmd.exe",
-              "hidden": false
-            }
-          ]
+            "list":[
+              {
+                  "guid":"{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                  "suppressApplicationTitle":true,
+                  "tabTitle":"Ubuntu 20.04",
+                  "name":"Ubuntu-20.04",
+                  "fontFace":"MesloLGS NF",
+                  "source":"Windows.Terminal.Wsl",
+                  "hidden":false
+              }{
+                  "guid":"{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                  "name":"Windows PowerShell",
+                  "commandline":"powershell.exe",
+                  "hidden":false
+              },
+              {
+                  "guid":"{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                  "name":"Command Prompt",
+                  "commandline":"cmd.exe",
+                  "hidden":false
+              }
+            ]
         },
-        "schemes": [
-          {
-            "name": "Dracula",
-            "cursorColor": "#F8F8F2",
-            "selectionBackground": "#44475A",
-            "background": "#282A36",
-            "foreground": "#F8F8F2",
-            "black": "#21222C",
-            "blue": "#BD93F9",
-            "cyan": "#8BE9FD",
-            "green": "#50FA7B",
-            "purple": "#FF79C6",
-            "red": "#FF5555",
-            "white": "#F8F8F2",
-            "yellow": "#F1FA8C",
-            "brightBlack": "#6272A4",
-            "brightBlue": "#D6ACFF",
-            "brightCyan": "#A4FFFF",
-            "brightGreen": "#69FF94",
-            "brightPurple": "#FF92DF",
-            "brightRed": "#FF6E6E",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#FFFFA5"
-          }
+        "schemes":[
+            {
+              "name":"Dracula",
+              "cursorColor":"#F8F8F2",
+              "selectionBackground":"#44475A",
+              "background":"#282A36",
+              "foreground":"#F8F8F2",
+              "black":"#21222C",
+              "blue":"#BD93F9",
+              "cyan":"#8BE9FD",
+              "green":"#50FA7B",
+              "purple":"#FF79C6",
+              "red":"#FF5555",
+              "white":"#F8F8F2",
+              "yellow":"#F1FA8C",
+              "brightBlack":"#6272A4",
+              "brightBlue":"#D6ACFF",
+              "brightCyan":"#A4FFFF",
+              "brightGreen":"#69FF94",
+              "brightPurple":"#FF92DF",
+              "brightRed":"#FF6E6E",
+              "brightWhite":"#FFFFFF",
+              "brightYellow":"#FFFFA5"
+            }
         ],
-        "actions": [
-          {
-            "command": {
-              "action": "copy",
-              "singleLine": false
+        "actions":[
+            {
+              "command":{
+                  "action":"copy",
+                  "singleLine":false
+              },
+              "keys":"ctrl+c"
             },
-            "keys": "ctrl+c"
-          },
-          {
-            "command": "paste",
-            "keys": "ctrl+v"
-          },
-          {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-          },
-          {
-            "command": {
-              "action": "splitPane",
-              "split": "auto",
-              "splitMode": "duplicate"
+            {
+              "command":"paste",
+              "keys":"ctrl+v"
             },
-            "keys": "alt+shift+d"
-          },
-          {
-            "command": "closePane",
-            "keys": "ctrl+w"
-          }
+            {
+              "command":"find",
+              "keys":"ctrl+shift+f"
+            },
+            {
+              "command":{
+                  "action":"splitPane",
+                  "split":"auto",
+                  "splitMode":"duplicate"
+              },
+              "keys":"alt+shift+d"
+            },
+            {
+              "command":"closePane",
+              "keys":"ctrl+w"
+            }
         ]
-
-  }
+      }
 
   ```
   </details>

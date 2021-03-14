@@ -39,6 +39,8 @@ Components' version :
 ### Spring Initializr
 - Details : Spring initializr ()
 - Clone project and add to IDE
+
+
     ``` shell
     curl https://start.spring.io/starter.tgz \
         -d language=java \
@@ -54,6 +56,8 @@ Components' version :
     | tar -xzvf -
     ```
 - delete application.properties and add application.yaml
+
+
     ``` yaml
     server:
       port: 8080
@@ -84,6 +88,8 @@ Components' version :
 - run and test
 - `curl -ivL http://localhost:8080/actuator/health`
 - Result : 
+
+
     ``` json
     {
        "status":"UP",
@@ -118,17 +124,19 @@ The first step in running the app on Kubernetes is to write a Dockerfile and pro
 
 1. Dockerfile
     - add Dockerfile to root project
-    ``` dockerfile
-    FROM openjdk:8-jre-alpine
 
-    WORKDIR /usr/app/
 
-    COPY build/libs/*.jar app.jar
+      ```dockerfile
+      FROM openjdk:8-jre-alpine
 
-    EXPOSE 8080
+      WORKDIR /usr/app/
 
-    ENTRYPOINT ["java","-jar","app.jar"]
-    ```
+      COPY build/libs/*.jar app.jar
+
+      EXPOSE 8080
+
+      ENTRYPOINT ["java","-jar","app.jar"]
+      ```
 2. Build image:
     `docker build -t image/springk8s .`
 
@@ -153,7 +161,7 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
 * Or you can have Kubernetes generate it for you using kubectl
 * The --dry-run flag allows us to generate the YAML without actually deploying anything to Kubernetes
 * Generate by command line : 
-    ```
+    ``` bash
     mkdir k8s
     kubectl create deployment k8s-demo-app --image localhost:5000/apps/demo -o yaml --dry-run=client > k8s/deployment.yaml
     ```
@@ -184,6 +192,8 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
     - `DEPLOYMENT_ENV: dev`
     - `kubectl create configmap springk8s-app-config --from-file=application.yaml`
 * Mount to container
+
+
     ``` yaml
     spec:
       containers:
@@ -217,6 +227,8 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
 * [spring actuator: Liveness + Readness](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-kubernetes-probes)
 
 * application.yaml
+
+
     ``` yaml
     management:
       endpoints:
@@ -234,6 +246,8 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
     ```
 
 * deployment.yaml
+
+
     ``` yaml
     livenessProbe:
     httpGet:
@@ -250,6 +264,8 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
 #### Graceful Shutdown
 
 * deployment.yaml
+
+
     ``` yaml
     apiVersion: apps/v1
     kind: Deployment
@@ -272,6 +288,8 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
 #### Handling In Flight Requests
 
 * application.yaml
+
+
     ``` yaml
     server:
       port: 8085
@@ -282,7 +300,9 @@ Kubernetes uses YAML files to provide a way of describing how the app will be de
 #### Resource Manage
 * [JVM in a Container](https://merikan.com/2019/04/jvm-in-a-container/)
 * Manage resource in k8s
-    ```
+
+
+    ``` yaml
     spec:
           imagePullSecrets:
             - name: regcred

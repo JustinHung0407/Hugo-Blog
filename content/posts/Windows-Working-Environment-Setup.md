@@ -1,25 +1,38 @@
 ---
-title: "Windows Working Environment Setup"
-description: "my windows pc setup for develope"
-date: 2021-03-13T06:17:47+08:00
-draft: false
+title: Windows Working Environment Setup
+description: my windows pc setup for develope
+date: 2021-03-13T06:17:47.000+08:00
 toc: true
-images:
-author: "Justin Hung"
-type: ["posts", "post"]
+images: 
+author:
+  '0': J
+  '1': u
+  '2': s
+  '3': t
+  '4': i
+  '5': n
+  '6': " "
+  '7': H
+  '8': u
+  '9': n
+  '10': g
+  name: Justin Hung
+type:
+- posts
+- post
 tags:
-  - WSL2
-  - Docker Desktop
-  - zsh
-  - zim
-  - brew
+- WSL2
+- Docker Desktop
+- zsh
+- zim
+- brew
 categories:
-  - setup
-  - Learning
+- setup
+- Learning
 series:
-  - Home Kubernetes public website setup
----
+- Home Kubernetes public website setup
 
+---
 # Achievement
 
 > WSL2 + Docker Desktop + zsh/zim + brew

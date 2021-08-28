@@ -1,4 +1,4 @@
-baseurl = "https://www.justinhung.space/"
+baseurl = "https://blog.justinhung.space/"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 title = "My Blog"

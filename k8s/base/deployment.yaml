@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hugo-blog
-  name: hugo-blog-deploy
-  namespace: hugo-blog
+    app: blog
+  name: blog-deploy
+  namespace: blog
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hugo-blog
+      app: blog
   template:
     metadata:
       labels:
-        app: hugo-blog
+        app: blog
         version: v1
     spec:
       imagePullSecrets:
         - name: regcred
       containers:
-        - name: hugo-blog
+        - name: blog
           image: hugo-app
           imagePullPolicy: IfNotPresent
           ports:

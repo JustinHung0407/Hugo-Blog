@@ -1,58 +1,59 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hugo-blog-svc
-  namespace: hugo-blog
+  name: blog-svc
+  namespace: blog
   labels:
-    app: hugo-blog
+    app: blog
 spec:
   type: ClusterIP
   ports:
     - port: 80
       name: http
   selector:
-    app: hugo-blog
+    app: blog
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hugo-blog-ingress
-  namespace: hugo-blog
+  name: blog-ingress
+  namespace: blog
   annotations:
-    kubernetes.io/ingress.class: "nginx"    
+    kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   tls:
-  - hosts:
-    - justinhung.space
-    secretName: acme-crt-secret
+    - hosts:
+        - justinhung.space
+      secretName: acme-crt-secret
   rules:
-  - host: justinhung.space
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hugo-blog-svc
-            port:
-              number: 80
+    - host: justinhung.space
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: blog-svc
+                port:
+                  number: 80
+---
 # apiVersion: networking.istio.io/v1beta1
 # kind: VirtualService
 # metadata:
-#   name: hugo-blog-vs
-#   namespace: hugo-blog
+#   name: blog-vs
+#   namespace: blog
 # spec:
 #   gateways:
 #     - istio-system/default
 #     - mesh
 #   hosts:
-#     - hugo-blog-svc.hugo-blog.svc.cluster.local
-#     - hugo-blog.127-0-0-1.nip.io
-#     - hugo-blog.justihung.space
+#     - blog-svc.blog.svc.cluster.local
+#     - blog.127-0-0-1.nip.io
+#     - blog.justihung.space
 #   http:
 #     - route:
 #         - destination:
-#             host: hugo-blog-svc.hugo-blog.svc.cluster.local
+#             host: blog-svc.blog.svc.cluster.local
 #             port:
 #               number: 80

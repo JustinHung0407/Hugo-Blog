@@ -7,16 +7,16 @@ toc: true
 images:
 author: "Justin Hung"
 type: ["posts", "post"]
-tags:
-  - Docker
-  - Kubernetes
-  - Java
-  - Spring Boot
-categories:
-  - POC
-  - Learning
-series:
-  - Kubernetes
+# tags:
+#   - Docker
+#   - Kubernetes
+#   - Java
+#   - Spring Boot
+# categories:
+#   - POC
+#   - Learning
+# series:
+#   - Kubernetes
 ---
 
 ## Prerequisites
@@ -34,7 +34,7 @@ Components' version :
 ---
 ## Dockerize
 | Makes original app build and run via Docker |
-| --- |
+| ------------------------------------------- |
 
 ### Spring Initializr
 - Details : Spring initializr ()
@@ -146,8 +146,8 @@ The first step in running the app on Kubernetes is to write a Dockerfile and pro
     `docker push / docker pull`
 
 ## Kubernetes
-|Makes Docker image deploy to Kubernetes|
-|---|
+| Makes Docker image deploy to Kubernetes |
+| --------------------------------------- |
 
 ### Deploying To Kubernetes
 

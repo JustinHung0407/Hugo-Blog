@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hugo-blog-ingress
-  namespace: hugo-blog
+  name: blog-ingress
+  namespace: blog
   annotations:
     kubernetes.io/ingress.class: "nginx"    
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -19,6 +19,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: hugo-blog-svc
+            name: blog-svc
             port:
               number: 80

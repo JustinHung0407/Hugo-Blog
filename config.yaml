@@ -21,6 +21,12 @@ enableEmoji: true
 
 googleAnalytics: UA-123-45
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
 minify:
   disableXML: true
   minifyOutput: true

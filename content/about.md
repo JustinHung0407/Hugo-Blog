@@ -1,19 +1,15 @@
 +++
 title = "About"
-date = "2020-04-07"
+date = "2022-05-01"
 aliases = ["about-us","about-hugo","contact"]
 [ author ]
-  name = "Hugo Authors"
+  name = "Justin Hung"
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+**Hi~ I'm Justin**
 
-It makes use of a variety of open source projects including:
+Full Stack coding enthusiast with 3+ years of experience in Web Development and Cloud Native Projects. Programmer proficient in Spring Boot (Java) and Express (Nodejs). Worked with docker, bare metal Kubernetes, CICD and Agile.
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+- [Github](https://github.com/JustinHung0407)
+- [Linkedin](https://www.linkedin.com/in/justinhung0407)
+- [Cakeresume](https://www.cakeresume.com/justin-hung)

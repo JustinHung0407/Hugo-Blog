@@ -3,7 +3,13 @@ title: Windows Working Environment Setup (with WSL and ZSH)
 description: my windows pc setup for develope
 date: 2021-03-13T06:17:47.000+08:00
 toc: true
-
+author: "Justin Hung"
+type: ["posts", "post"]
+tags:
+  - Windows
+categories:
+  - Scripts
+  - Setup
 ---
 # Achievement
 

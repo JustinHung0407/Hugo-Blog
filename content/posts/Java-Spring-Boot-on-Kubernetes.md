@@ -1,5 +1,5 @@
 ---
-title: "Java - Spring Boot on Kubernetes"
+title: "Setting up Spring Boot Web App on Kubernetes"
 description: "Java Spring Boot Web App containerize and deploy to Kubernetes"
 date: 2021-02-23T22:08:25+08:00
 draft: false
@@ -7,22 +7,23 @@ toc: true
 images:
 author: "Justin Hung"
 type: ["posts", "post"]
-# tags:
-#   - Docker
-#   - Kubernetes
-#   - Java
-#   - Spring Boot
-# categories:
-#   - POC
-#   - Learning
-# series:
-#   - Kubernetes
+tags:
+  - Docker
+  - Kubernetes
+  - Java
+  - Spring Boot
+categories:
+  - POC
+  - Learning
+series:
+  - Kubernetes
 ---
 
 ## Prerequisites
-Everyone will need:
+It's recommended to have following skills before starting :
 
 Basic knowledge of Java, Gradle, Docker and Kubernetes
+
 Components' version : 
 
 * JDK 8 or higher

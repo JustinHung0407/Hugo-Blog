@@ -1,8 +1,10 @@
-# Justin-Simple-Blog [[Hugo version](https://github.com/JustinHung0407/Hugo-Blog)]
+# Justin's Blog
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/51c3e506-dad6-430f-b575-8a0e4c28c6e5/deploy-status)](https://app.netlify.com/sites/justinblog/deploys)
 
 A really simple blog for recording things in daily life.
+
+> Build by [Hugo](https://github.com/gohugoio/hugo) and Deploy on [Netlify](https://www.netlify.com/).
 
 ## Running Project
   * Local test
@@ -26,13 +28,14 @@ A really simple blog for recording things in daily life.
 ## Submodule Usage
 - add submodule
   - `git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth=1`
-- update submodule
+- init submodule
   - `git submodule update --init --recursive`
-
+- update submodule
+  - `git submodule update --remote --merge`
 - remove submodule
-  - `git rm -r --cached themes/hello-friend-ng`
-  - `rm -rf .git/modules/themes/hello-friend-ng`
-  - `rm -rf themes/hello-friend-ng`
+  - `git rm -r --cached themes/PaperMod`
+  - `rm -rf .git/modules/themes/PaperMod`
+  - `rm -rf themes/PaperMod`
   - edit .gitmodules
   - edit .git/config
 

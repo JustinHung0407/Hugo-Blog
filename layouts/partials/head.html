@@ -23,17 +23,8 @@
     {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
-{{- if site.Params.analytics.googlesiteVerificationTag }}
-<meta name="google-site-verification" content="{{ site.Params.analytics.googlesiteVerificationTag }}">
-{{- end }}
-{{ template "_internal/google_analytics_async.html" . }}
 
-{{- if site.Params.analytics.yandexsiteVerificationTag }}
-<meta name="yandex-verification" content="{{ site.Params.analytics.yandexsiteVerificationTag }}">
-{{- end }}
-{{- if site.Params.analytics.bingsiteVerificationTag }}
-<meta name="msvalidate.01" content="{{ site.Params.analytics.bingsiteVerificationTag }}">
-{{- end }}
+{{ template "_internal/google_analytics_async.html" . }}
 
 {{- /* Styles */}}
 {{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}

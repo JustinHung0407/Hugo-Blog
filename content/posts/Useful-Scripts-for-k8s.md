@@ -46,7 +46,7 @@ for ns in $namespace
 done
 ```
 
-
+<!--adsense-->
 ## Delete all of some resources (if resources deletion is stuck)
 
 - Delete certain k8s resource

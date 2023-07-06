@@ -28,6 +28,7 @@
     </main>
 
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{ partial "consent.html" . }}
 </body>
 
 </html>

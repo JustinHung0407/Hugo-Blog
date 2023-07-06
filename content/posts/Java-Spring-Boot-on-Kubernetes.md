@@ -22,15 +22,13 @@ series:
 ## Prerequisites
 It's recommended to have following skills before starting :
 
-Basic knowledge of Java, Gradle, Docker and Kubernetes
-
-Components' version : 
-
-* JDK 8 or higher
-* Please ensure you have a JDK installed and not just a JRE
-* Docker installed
-* Kubectl installed
-* IDE (IntelliJ, Eclipse, VSCode)
+- Basic knowledge of Java, Gradle, Docker and Kubernetes
+- Components' version : 
+  * JDK 8 or higher
+  * Please ensure you have a JDK installed and not just a JRE
+  * Docker installed
+  * Kubectl installed
+  * IDE (IntelliJ, Eclipse, VSCode)
 
 ---
 ## Dockerize

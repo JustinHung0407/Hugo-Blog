@@ -8,7 +8,7 @@ A really simple blog for recording things in daily life.
 
 ## Running Project
   * Local test
-    * `hugo server --disableFastRender -w -v --baseUrl=localhost --bind="0.0.0.0"`
+    * `hugo server --disableFastRender --noHTTPCache -w -v -b localhost -p 1313`
   * Docker:
     * `docker build -t hugo-app .`
     * `docker run -itd -p 80:80 hugo-app`

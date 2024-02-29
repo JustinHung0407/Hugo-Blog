@@ -1,4 +1,4 @@
-baseurl: "https://blog.justinhung.space/"
+baseurl: "https://blog.fism.app/"
 title: JustinBlog
 paginate: 5
 # languageCode: en-us
@@ -86,8 +86,8 @@ params:
         url: posts
       - name: Tags
         url: tags
-      - name: Archives
-        url: archives
+      - name: Archive
+        url: archive
 
   # home-info mode
   homeInfoParams:
@@ -101,6 +101,8 @@ params:
       url: "mailto:hugh.12345zxcvb@gmail.com"
     - name: github
       url: "https://github.com/JustinHung0407"
+    - name: gitea
+      url: "https://gitea.fism.app/justinhung"
     - name: linkedin
       url: "https://www.linkedin.com/in/justinhung0407"
     - name: stackoverflow

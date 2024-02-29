@@ -150,7 +150,7 @@ menu:
       url: about/
       weight: 10
     - name: Archive
-      url: archives
+      url: archive
       weight: 20
     - identifier: post
       name: Post

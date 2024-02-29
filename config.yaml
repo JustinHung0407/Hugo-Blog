@@ -145,16 +145,16 @@ params:
 
 menu:
   main:
-    - identifier: about
-      name: About
-      url: about/
-      weight: 10
-    - name: Archive
-      url: archive
-      weight: 20
     - identifier: post
       name: Post
-      url: /posts/
+      url: posts
+      weight: 10
+    - name: Archive
+      url: archives
+      weight: 20
+    - identifier: about
+      name: About
+      url: about
       weight: 30
     - name: Search
       url: search

@@ -2,7 +2,7 @@ baseurl: "https://blog.fism.app/"
 title: JustinBlog
 paginate: 5
 # languageCode: en-us
-theme: PaperMod
+theme: ["PaperMod"]
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -38,7 +38,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod, JustinHung, Kubernetes, Docker]
   author: Justin Hung
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["images/cover/cover.jpg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -53,6 +53,7 @@ params:
   comments: true
   hidemeta: false
   hideSummary: false
+  ShowPageNums: true
   showtoc: true
   tocopen: false
 
@@ -84,15 +85,11 @@ params:
         url: about
       - name: Posts
         url: posts
-      - name: Tags
-        url: tags
-      - name: Archive
-        url: archive
 
   # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+  # homeInfoParams:
+  #   Title: "Hi there \U0001F44B"
+  #   Content: Welcome to my blog
 
   socialIcons:
     - name: slack
@@ -111,20 +108,26 @@ params:
   analytics:
     google:
       SiteVerificationTag: "G-CCZJN5Y4DJ"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+    # bing:
+    #   SiteVerificationTag: "XYZabc"
+    # yandex:
+    #   SiteVerificationTag: "XYZabc"
 
   adsense:
     client:
     inArticleSlot:
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-    responsiveImages: false
+    # image: "images/cover.jpg"
+    # # can also paste direct link from external site
+    # # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+    # alt: "<text>"
+    # caption: "<text>"
+    relative: true # To use relative path for cover image, used in hugo Page-bundles
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+    responsiveImages: true
     linkFullImages: true
 
   editPost:
@@ -141,24 +144,25 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content", "template", "java"]
+    keys: ["title", "permalink", "summary", "content", "template"]
 
 menu:
   main:
     - identifier: post
-      name: Post
+      name: Posts
       url: posts
       weight: 10
-    - name: Archive
+    - identifier: archive
+      name: Archives
       url: archives
       weight: 20
-    - identifier: about
-      name: About
-      url: about
-      weight: 30
+    - identifier: tags
+      name: Tags
+      url: tags
+      weight: 40
     - name: Search
       url: search
-      weight: 40
+      weight: 50
       style: monokai
 
 pygmentsUseClasses: false
@@ -178,3 +182,42 @@ markup:
     lineNumbersInTable: true
     noClasses: true
     tabWidth: 4
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+  zh-tw:
+    languageName: "繁體中文"
+    weight: 2
+    taxonomies:
+      category: 類別
+      tag: 標籤
+      series: 系列
+    menu:
+      main:
+        - name: 文章
+          url: posts
+          weight: 10
+        - identifier: archive
+          name: 彙整
+          url: archives
+          weight: 20
+        - identifier: tags
+          name: 標籤
+          url: tags
+          weight: 30
+        - name: 搜尋
+          url: search
+          weight: 40
+          style: monokai
+    params:
+      languageAltTitle: "Justin Hung - 部落格"
+      profileMode:
+        enabled: true
+        subtitle: "⚛️Java | ☯️Golang | ♈資深軟體工程師 | ☸️雲原生"
+        buttons:
+          - name: 關於
+            url: about
+          - name: 文章
+            url: posts

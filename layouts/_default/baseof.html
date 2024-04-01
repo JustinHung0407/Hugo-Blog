@@ -1,3 +1,7 @@
+{{- if lt hugo.Version "0.112.4" }}
+{{- errorf "=> hugo v0.112.4 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
 <!DOCTYPE html>
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
@@ -6,13 +10,14 @@
 </head>
 
 <body class="
-    {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-    {{- print "list" -}}
-    {{- end -}}
-    {{- if eq site.Params.defaultTheme `dark` -}}
-    {{- print " dark" }}
-    {{- end -}}
-    " id="top">
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSZXH6V"
@@ -21,14 +26,12 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    {{- partialCached "header.html" . .Page -}}
 
+    {{- partialCached "header.html" . .Page -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
-
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
-    {{ partial "consent.html" . }}
 </body>
 
 </html>

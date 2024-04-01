@@ -2,13 +2,13 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/51c3e506-dad6-430f-b575-8a0e4c28c6e5/deploy-status)](https://app.netlify.com/sites/justinblog/deploys)
 
-A really simple blog for recording things in daily life.
+A really simple blog for recording things in daily life and some technical notes.
 
-> Build by [Hugo](https://github.com/gohugoio/hugo) and Deploy on [Netlify](https://www.netlify.com/).
+> Build by [Hugo](https://github.com/gohugoio/hugo) with theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod) and hosted on [Netlify](https://www.netlify.com/).
 
 ## Running Project
   * Local test
-    * `hugo server --disableFastRender --noHTTPCache -w -v -b localhost -p 1313`
+    * `hugo server --disableFastRender --noHTTPCache -w --logLevel info -b localhost -p 1313`
   * Docker:
     * `docker build -t hugo-app .`
     * `docker run -itd -p 80:80 hugo-app`
@@ -46,4 +46,5 @@ A really simple blog for recording things in daily life.
   - `https://css2sass.herokuapp.com/`
 
 ## Reference
+- [hugo-PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 - [submodule](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule)

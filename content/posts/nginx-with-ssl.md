@@ -3,8 +3,6 @@ title: "Setting up a Local Nginx with a Self-Signed Certificate"
 description: "Create a safe local nginx for test usage"
 date: 2023-07-06T02:10:18.062Z
 draft: false
-toc: true
-images:
 author: "Justin Hung"
 type: ["posts", "post"]
 tags:
@@ -15,6 +13,8 @@ categories:
   - POC
 series:
   - Docker
+cover:
+  image: images/cover/nginx-ssl.jpg
 ---
 
 In this blog post, we will discuss how to create a local Nginx server with 443 port and redirect 80 to 443 with Docker Compose. We will also include the command for generating a self-certificate.
